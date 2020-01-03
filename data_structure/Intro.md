@@ -57,7 +57,46 @@
   - int (정수 표현)
 
     - 4 byte를 사용(시스템에 따라 다름)
-    - 
+      - 표현할 수 있는 범위: - 2^31 ~ 2^31 -1
+      - 다양한 크기로 확장됨: _int8, _int16, _int32, _int64
+    - 언어에 따라 정수 표현 방법이 다양하게 제공되는데, C같은 경우는 short(2 bytes), long(4 bytes), unsigned int(4 bytes) 등과 같은 다양한 정수 자료형이 존재함
+      - short type의 표현 범위: -2^15 ~ 2^15 -1
+      - unsigned int type 의 표현 범위: 0 ~ 2^32 -1
+
+    - 음수의 3가지 표현 방법 ( 대부분 2의 보수를 사용 )
+      - Sign bit : 1번째 bit 또는 MSB(Most Significant Bit) 를 이용
+      - 1의 보수
+      - 2의 보수
+
+  - float(실수 표현)
+    - 부동 소수점(floating point)
+
+  
+
+  2) 사용자가 정의하는 자료형(User-defined data type)
+
+  - structure (C언어)
+  - class(C++, JAVA, Python)
+
+
+
+- 자료의 관리(Manipulation)
+
+  - 추가(insert), 제거(delete), 검색(search), 갱신(modify), 출력, 정렬 등 많은 관리 작업이 가능
+
+  - 가장 중요한 3연산: 추가, 제거, 검색
+
+  - 추가와 제거는 1번만 사용 가능
+
+  - 검색은 매우 빈번하게 사용 -> 가장 중요한 관리 작업은 "검색"임
+
+    <검색(search) 의 3가지 종류>
+
+    - 주어진 집합에서 임의의 원소를 찾아라(Find arbitrary)
+    - 주어진 집합에서 가장 먼저/늦게 온 원소를 찾아라(Find earliest/last)
+    - 주어진 집합에서 top(최대/최소)인 원소를 찾아라(Find top)
+
+  
 
 
 ### 1-3. 효율적인 기법
