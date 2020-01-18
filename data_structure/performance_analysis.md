@@ -198,4 +198,5 @@
   }
   ```
 
-  ![Big-O-graph](C:\Users\ahrum\cs-study-note\data_structure\imgs\Big-O-graph.png)
+  ![Big-O-graph](./imgs/Big-O-graph.png)
+
