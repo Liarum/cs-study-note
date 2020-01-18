@@ -59,3 +59,145 @@
 
      
 
+##### 점근적 분석법
+
+- 시간 복잡도는 매우 큰 입력(reasonably large length of input) 에 대해서 측정함
+- g(n) 을 이용한 f(n) 의 성능 표현
+  - g(n)은 f(n) 보다 성능이 나쁨 `g(n) is the worst case of f(n)`
+  - 최악의 경우에도 f(n)은 g(n) 보다 좋음 `In the worst case, f(n) is better than g(n)`
+  - f(n)의 상한은 g(n)임 `The upper bound of f(n) is g(n)`
+  - f(n) <= g(n)
+  - g(n) 은 많이 사용되는 표준적인 함수를 이용 `예) 1, n, log n, n^2, n log n, n^n`
+
+
+
+
+
+### 2-2 Big-O 표기법
+
+#### Big-O 표기법의 예
+
+1) g(n) = 1
+
+- 상수 시간 복잡도 (constant time complex)
+
+- f(n) = O(1)
+
+- 입력이 증가해도 항상 일정한 시간이 걸리는 경우
+
+- 가장 이상적인 성능
+
+  ```c++
+  void f(int n)
+  {
+      printf("Hello");
+  }
+  
+  void f2(int n)
+  {
+      printf("Hello");
+      printf("World");
+  }
+  ```
+
+  
+
+2) g(n) = n
+
+- 선형 시간 복잡도(linear time complex)
+
+- f(n) = O(n)
+
+- 시간은 입력의 크기에 비례해서 증가함(n에 비례)
+
+  ```c++
+  void func(int n)
+  {
+      i = 0;
+      while (i < n) {
+          prinf("Hello");
+          i++;
+      }
+  }
+  ```
+
+
+
+3) g(n) = n^k
+
+- 다항 시간 복잡도(polynominal time complex)
+
+- f(n) = O(n^2) if k = 2
+
+- 시간은 입력의 크기의 k제곱에 비례해서 증가함
+
+  ```c++
+  void func(int n)
+  {
+      for (i=0; i < n; i++) {
+          for (j=0; j < n; j++) {
+              printf("Helle");
+          }
+      }
+  }
+  ```
+
+  
+
+4) g(n) = k^n
+
+- 지수 시간 복잡도(exponential time complex)
+
+- f(n) = O(2^k) if k = 2
+
+  ```c++
+  int fibo(int n) {
+      if (n == 0)
+          return 0;
+      if (n == 1) 
+          return 1;
+      return func(n - 1) + func(n - 2);
+  }
+  ```
+
+  
+
+5) g(n) = logk n
+
+- 로그 시간 복잡도(log time complex)
+
+- f(n) = O(log n) if k =2 
+
+- 시간은 n의 log에 비례해서 증가함
+
+- 밑(k) 는 상관없음
+
+  ```C++
+  int func (int n)
+  {
+      for (k = 1; k < n; k = k * 10) {
+          printf("Hello");
+      }
+  }
+  ```
+
+  
+
+6) g(n) = n log n
+
+- f(n) = O(n log n) if k =2
+
+  ```C++
+  void func (int n) 
+  {
+      for (i = 1; i <= n; i++) {
+          for (j = 1; i <= n; j *= 10) {
+              printf("Hello");
+          }
+      }
+  }
+  ```
+
+  
+
+![](C:\Users\ahrum\Desktop\Big-O-graph.png)
