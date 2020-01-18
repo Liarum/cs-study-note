@@ -64,9 +64,11 @@
 
 ##### 메모리에서 배열의 구현
 
-![](C:\Users\ahrum\Desktop\메모리상배열.png)
 
-​			=> mylist의 주소(23040)으로 4개의 원소에 접근할 수 있음
+
+​			![array_in_memory](C:\Users\ahrum\cs-study-note\data_structure\imgs\array_in_memory.png) 
+
+​                         => mylist의 주소(23040)으로 4개의 원소에 접근할수 있음
 
 
 
