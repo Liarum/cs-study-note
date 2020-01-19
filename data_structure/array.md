@@ -109,9 +109,44 @@
 - 저장(store): 원소 x를 배열의 i번째 위치에 저장
 
   ```c++
-  int L[10];
-  int x = L[5];
-  L[5] = x;
+  int L[10]; // 생성
+  int x = L[5]; // 인출
+  L[5] = x; // 저장
   ```
 
-  
+
+
+
+##### 추가 연산들
+
+- 검색(search)
+- 추가(insert)
+- 제거(delete)
+- 크기(size)
+- 풀(isFull)
+- 엠티(isEmpty)
+
+![](./imgs/operations_of_array.png)
+
+
+
+
+
+### 3-1. 배열의 검색
+
+##### 검색(search) 연산
+
+- 성공적인 검색 : 찾고자 하는 key element 가 배열에 있는 경우
+- 실패한 검색: 찾고자 하는 key element가 배열에 없는 경우
+
+
+
+##### 선형 검색(linear search)
+
+- 완전 검색(exhaustive search) 또는 순차 검색(sequential search) 라고도 함
+- 배열의 **첫번째** 원소부터 차례로 방문하면서 key element와 동일한 원소가 있는지 확인
+- 정렬되지 않은 배열에서도 적용할 수 있다
+
+
+
+##### 이진 검색(binary search)
